@@ -42,10 +42,10 @@ export default function Navbar() {
         transform: hidden ? "translateY(-100%)" : "translateY(0)",
       }}
     >
-      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between py-6">
+      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between py-3">
         {/* Logo */}
         <a href="#home" className="flex items-center">
-          <Image src="/logo.png" alt="Chico's Chili" width={360} height={144} className="object-contain" style={{ maxHeight: "140px", width: "auto" }} />
+          <Image src="/logo.png" alt="Chico's Chili" width={200} height={80} className="object-contain" style={{ maxHeight: "72px", width: "auto" }} />
         </a>
 
         {/* Desktop Nav */}
