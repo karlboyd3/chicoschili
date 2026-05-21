@@ -35,20 +35,14 @@ const contactInfo = [
   {
     icon: <PhoneIcon />,
     label: "Phone",
-    value: "240-595-3696",
-    href: "tel:2405953696",
+    value: "571-545-0059",
+    href: "tel:5715450059",
   },
   {
     icon: <MailIcon />,
     label: "Email",
     value: "bbolden@chicoschili.com",
     href: "mailto:bbolden@chicoschili.com",
-  },
-  {
-    icon: <PinIcon />,
-    label: "Address",
-    value: "5510 Cherokee Ave, Suite 300 #1148\nAlexandria, VA 22312",
-    href: "https://maps.google.com/?q=5510+Cherokee+Ave+Alexandria+VA+22312",
   },
   {
     icon: <InstagramIcon />,

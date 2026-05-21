@@ -111,11 +111,11 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="tel:2405953696"
+                  href="tel:5715450059"
                   className="flex items-center gap-2 text-sm"
                   style={{ color: "rgba(255,255,255,0.65)", textDecoration: "none" }}
                 >
-                  <PhoneIcon /> 240-595-3696
+                  <PhoneIcon /> 571-545-0059
                 </a>
               </li>
               <li>
@@ -125,22 +125,6 @@ export default function Footer() {
                   style={{ color: "rgba(255,255,255,0.65)", textDecoration: "none" }}
                 >
                   <MailIcon /> bbolden@chicoschili.com
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://maps.google.com/?q=5510+Cherokee+Ave+Alexandria+VA+22312"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-start gap-2 text-sm leading-relaxed"
-                  style={{ color: "rgba(255,255,255,0.65)", textDecoration: "none" }}
-                >
-                  <PinIcon />
-                  <span>
-                    5510 Cherokee Ave, Suite 300 #1148
-                    <br />
-                    Alexandria, VA 22312
-                  </span>
                 </a>
               </li>
             </ul>
