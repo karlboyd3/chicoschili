@@ -3,7 +3,6 @@ import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import MenuSection from "@/components/MenuSection";
 import CateringSection from "@/components/CateringSection";
-import GallerySection from "@/components/GallerySection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
@@ -16,7 +15,6 @@ export default function Home() {
         <AboutSection />
         <MenuSection />
         <CateringSection />
-        <GallerySection />
         <ContactSection />
       </main>
       <Footer />
