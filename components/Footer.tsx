@@ -55,7 +55,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="mb-4">
-              <Image src="/logo.png" alt="Chico's Chili" width={160} height={64} className="object-contain" style={{ maxHeight: "56px", width: "auto" }} />
+              <Image src="/logo.png" alt="Chico's Chili" width={220} height={88} className="object-contain" style={{ maxHeight: "80px", width: "auto" }} />
             </div>
             <p
               className="text-sm leading-relaxed max-w-xs"
