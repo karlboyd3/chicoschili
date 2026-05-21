@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -15,10 +15,21 @@ const navLinks = [
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [hidden, setHidden] = useState(false);
+  const lastScrollY = useRef(0);
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener("scroll", handleScroll);
+    const handleScroll = () => {
+      const current = window.scrollY;
+      setScrolled(current > 20);
+      if (current > lastScrollY.current && current > 80) {
+        setHidden(true);
+      } else {
+        setHidden(false);
+      }
+      lastScrollY.current = current;
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -29,6 +40,7 @@ export default function Navbar() {
         backgroundColor: scrolled ? "rgba(28, 13, 6, 0.97)" : "rgba(28, 13, 6, 0.85)",
         backdropFilter: "blur(12px)",
         borderBottom: scrolled ? "1px solid rgba(201, 162, 39, 0.2)" : "1px solid transparent",
+        transform: hidden ? "translateY(-100%)" : "translateY(0)",
       }}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between py-6">
