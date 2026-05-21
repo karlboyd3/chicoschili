@@ -34,7 +34,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-18 py-4">
         {/* Logo */}
         <a href="#home" className="flex items-center">
-          <Image src="/logo.png" alt="Chico's Chili" width={200} height={80} className="object-contain" style={{ maxHeight: "72px", width: "auto" }} />
+          <Image src="/logo.png" alt="Chico's Chili" width={280} height={112} className="object-contain" style={{ maxHeight: "100px", width: "auto" }} />
         </a>
 
         {/* Desktop Nav */}
