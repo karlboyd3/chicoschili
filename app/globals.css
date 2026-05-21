@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+:root {
+  --chili-red: #8B1818;
+  --chili-orange: #CC4A18;
+  --cream: #FDF5E6;
+  --dark-brown: #1C0D06;
+  --gold: #C9A227;
+  --charcoal: #242424;
+  --warm-white: #FAF7F2;
+}
+
+@theme inline {
+  --color-chili-red: var(--chili-red);
+  --color-chili-orange: var(--chili-orange);
+  --color-cream: var(--cream);
+  --color-dark-brown: var(--dark-brown);
+  --color-gold: var(--gold);
+  --color-charcoal: var(--charcoal);
+  --color-warm-white: var(--warm-white);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-inter, Arial, sans-serif);
+  background-color: var(--warm-white);
+  color: var(--dark-brown);
+}
+
+.font-display {
+  font-family: var(--font-playfair, Georgia, serif);
+}
+
+.footer-link {
+  color: rgba(253, 245, 230, 0.65);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-link:hover {
+  color: var(--chili-orange);
+}
