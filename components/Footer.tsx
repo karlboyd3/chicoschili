@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const navLinks = [
   { label: "About", href: "#about" },
   { label: "Menu", href: "#menu" },
@@ -52,14 +54,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <span
-                className="font-display text-xl font-bold"
-                style={{ color: "var(--cream)" }}
-              >
-                Chico&apos;s{" "}
-                <span style={{ color: "var(--chili-orange)" }}>Chili</span>
-              </span>
+            <div className="mb-4">
+              <Image src="/logo.png" alt="Chico's Chili" width={160} height={64} className="object-contain" style={{ maxHeight: "56px", width: "auto" }} />
             </div>
             <p
               className="text-sm leading-relaxed max-w-xs"

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const navLinks = [
   { label: "About", href: "#about" },
@@ -32,14 +33,8 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-18 py-4">
         {/* Logo */}
-        <a href="#home" className="flex items-center gap-2 group">
-          <span
-            className="font-display text-xl font-bold tracking-wide"
-            style={{ color: "var(--cream)" }}
-          >
-            Chico&apos;s{" "}
-            <span style={{ color: "var(--chili-orange)" }}>Chili</span>
-          </span>
+        <a href="#home" className="flex items-center">
+          <Image src="/logo.png" alt="Chico's Chili" width={140} height={56} className="object-contain" style={{ maxHeight: "48px", width: "auto" }} />
         </a>
 
         {/* Desktop Nav */}
