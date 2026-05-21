@@ -156,7 +156,7 @@ export default function Footer() {
             className="text-xs"
             style={{ color: "rgba(253,245,230,0.3)" }}
           >
-            &copy; {year} Chico&apos;s Chili. All rights reserved. | Bryant Bolden
+            &copy;{" "}{year}{" "}Chico&apos;s Chili. All rights reserved.{" "}|{" "}Bryant Bolden
           </p>
           <p
             className="text-xs"
