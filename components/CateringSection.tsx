@@ -1,30 +1,26 @@
 const eventTypes = [
-  { icon: "🏡", label: "Family Gatherings" },
-  { icon: "🎉", label: "Birthday Parties" },
-  { icon: "🏢", label: "Office Lunches" },
-  { icon: "🎪", label: "Pop-Up Events" },
-  { icon: "🏈", label: "Game Day Spreads" },
-  { icon: "🌆", label: "Community Events" },
+  "Family Gatherings",
+  "Birthday Parties",
+  "Office Lunches",
+  "Pop-Up Events",
+  "Game Day Spreads",
+  "Community Events",
 ];
 
 const cateringPerks = [
   {
-    icon: "🍲",
     title: "Chili by the Batch",
     desc: "We cook in volume so your whole crowd gets served — hot, fresh, and ready.",
   },
   {
-    icon: "🚗",
     title: "Available for Delivery",
     desc: "We can bring Chico's Chili to your venue. Contact us to coordinate logistics.",
   },
   {
-    icon: "📋",
     title: "Flexible Options",
     desc: "Choose from our full menu offerings. Mix and match for your crowd's appetite.",
   },
   {
-    icon: "📞",
     title: "Easy Booking",
     desc: "Just reach out — we'll discuss your event size, menu needs, and timing.",
   },
@@ -96,18 +92,17 @@ export default function CateringSection() {
 
         {/* Event types */}
         <div className="flex flex-wrap justify-center gap-3 mb-16">
-          {eventTypes.map((e) => (
+          {eventTypes.map((label) => (
             <div
-              key={e.label}
-              className="flex items-center gap-2 px-5 py-3 rounded-full text-sm font-medium"
+              key={label}
+              className="px-5 py-3 rounded-full text-sm font-medium"
               style={{
                 backgroundColor: "rgba(253,245,230,0.05)",
                 border: "1px solid rgba(253,245,230,0.12)",
                 color: "var(--cream)",
               }}
             >
-              <span>{e.icon}</span>
-              <span>{e.label}</span>
+              {label}
             </div>
           ))}
         </div>
@@ -123,7 +118,10 @@ export default function CateringSection() {
                 border: "1px solid rgba(253,245,230,0.08)",
               }}
             >
-              <div className="text-3xl mb-4">{perk.icon}</div>
+              <div
+                className="w-8 h-0.5 mb-5"
+                style={{ backgroundColor: "var(--gold)" }}
+              />
               <h3
                 className="font-bold text-base mb-2"
                 style={{ color: "var(--cream)" }}
@@ -149,11 +147,6 @@ export default function CateringSection() {
             border: "1px solid rgba(201,162,39,0.2)",
           }}
         >
-          <div
-            className="text-5xl mb-4"
-          >
-            🤝
-          </div>
           <h3
             className="font-display text-3xl font-bold mb-4"
             style={{ color: "var(--cream)" }}

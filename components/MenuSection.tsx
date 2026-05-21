@@ -1,41 +1,35 @@
 const menuItems = [
   {
-    emoji: "🍲",
     name: "Chicos Chili",
     desc: "A hearty bowl of signature homemade chili packed with bold seasoning and rich flavor.",
     tag: "Signature",
     tagColor: "var(--chili-red)",
   },
   {
-    emoji: "🍚",
     name: "Chili Over Rice",
     desc: "Signature chili served over warm rice for a filling, comfort-food meal.",
     tag: "Fan Favorite",
     tagColor: "var(--chili-orange)",
   },
   {
-    emoji: "🌽",
     name: "Cornbread",
     desc: "Soft, golden cornbread that pairs perfectly with every chili order.",
     tag: "Add-On",
     tagColor: "var(--gold)",
   },
   {
-    emoji: "🌭",
     name: "Chili Dogs",
     desc: "Classic hot dogs topped with Chicos Chili for a bold, messy, satisfying favorite.",
     tag: "Classic",
     tagColor: "var(--chili-red)",
   },
   {
-    emoji: "🧀",
     name: "Chili Nachos",
     desc: "Crispy nachos loaded with Chicos Chili and toppings. Great for sharing or as a full meal.",
     tag: "Great for Sharing",
     tagColor: "var(--chili-orange)",
   },
   {
-    emoji: "🍟",
     name: "Chili Fries",
     desc: "Hot fries covered with Chicos Chili for the ultimate comfort-food side or meal.",
     tag: "Comfort Food",
@@ -61,11 +55,10 @@ function MenuCard({ item }: { item: (typeof menuItems)[number] }) {
             "linear-gradient(135deg, #3D1108 0%, #6B2210 50%, #3A0E06 100%)",
         }}
       >
-        <div className="text-center">
-          <div className="text-7xl transition-transform duration-300 group-hover:scale-110">
-            {item.emoji}
-          </div>
-        </div>
+        <svg className="w-8 h-8 opacity-15" fill="none" stroke="currentColor" viewBox="0 0 24 24" style={{ color: "var(--cream)" }}>
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
+        </svg>
         {/* Tag */}
         <div
           className="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-bold"
@@ -188,7 +181,7 @@ export default function MenuSection() {
               boxShadow: "0 4px 24px rgba(204,74,24,0.35)",
             }}
           >
-            Get in Touch 🌶️
+            Get in Touch
           </a>
         </div>
       </div>

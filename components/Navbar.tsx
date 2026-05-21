@@ -33,7 +33,6 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-18 py-4">
         {/* Logo */}
         <a href="#home" className="flex items-center gap-2 group">
-          <span className="text-2xl">🌶️</span>
           <span
             className="font-display text-xl font-bold tracking-wide"
             style={{ color: "var(--cream)" }}

@@ -1,13 +1,13 @@
 const galleryItems = [
-  { emoji: "🍲", label: "Chicos Chili Bowl", size: "large" },
-  { emoji: "🌶️", label: "Fresh Ingredients", size: "small" },
-  { emoji: "🍚", label: "Chili Over Rice", size: "small" },
-  { emoji: "🌭", label: "Chili Dogs", size: "small" },
-  { emoji: "🍟", label: "Chili Fries", size: "large" },
-  { emoji: "🧀", label: "Chili Nachos", size: "small" },
-  { emoji: "🌽", label: "Golden Cornbread", size: "small" },
-  { emoji: "🤝", label: "Serving the Community", size: "small" },
-  { emoji: "👨‍🍳", label: "Bryant in the Kitchen", size: "large" },
+  { label: "Chicos Chili Bowl", size: "large" },
+  { label: "Fresh Ingredients", size: "small" },
+  { label: "Chili Over Rice", size: "small" },
+  { label: "Chili Dogs", size: "small" },
+  { label: "Chili Fries", size: "large" },
+  { label: "Chili Nachos", size: "small" },
+  { label: "Golden Cornbread", size: "small" },
+  { label: "Serving the Community", size: "small" },
+  { label: "Bryant in the Kitchen", size: "large" },
 ];
 
 function GalleryCard({
@@ -25,10 +25,11 @@ function GalleryCard({
         border: "1px solid rgba(253,245,230,0.06)",
       }}
     >
-      {/* Emoji */}
-      <div className="text-6xl transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
-        {item.emoji}
-      </div>
+      {/* Placeholder icon */}
+      <svg className="w-7 h-7 opacity-15" fill="none" stroke="currentColor" viewBox="0 0 24 24" style={{ color: "var(--cream)" }}>
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
+      </svg>
 
       {/* Hover overlay */}
       <div

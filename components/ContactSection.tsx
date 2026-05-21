@@ -1,28 +1,57 @@
-"use client";
+function PhoneIcon() {
+  return (
+    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+    </svg>
+  );
+}
 
-import { useState } from "react";
+function MailIcon() {
+  return (
+    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+    </svg>
+  );
+}
+
+function PinIcon() {
+  return (
+    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+    </svg>
+  );
+}
+
+function InstagramIcon() {
+  return (
+    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+    </svg>
+  );
+}
 
 const contactInfo = [
   {
-    icon: "📞",
+    icon: <PhoneIcon />,
     label: "Phone",
     value: "240-595-3696",
     href: "tel:2405953696",
   },
   {
-    icon: "✉️",
+    icon: <MailIcon />,
     label: "Email",
     value: "bbolden@chicoschili.com",
     href: "mailto:bbolden@chicoschili.com",
   },
   {
-    icon: "📍",
+    icon: <PinIcon />,
     label: "Address",
     value: "5510 Cherokee Ave, Suite 300 #1148\nAlexandria, VA 22312",
     href: "https://maps.google.com/?q=5510+Cherokee+Ave+Alexandria+VA+22312",
   },
   {
-    icon: "📱",
+    icon: <InstagramIcon />,
     label: "Instagram",
     value: "@chicoschili",
     href: "https://instagram.com/chicoschili",
@@ -30,47 +59,6 @@ const contactInfo = [
 ];
 
 export default function ContactSection() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
-  });
-  const [submitted, setSubmitted] = useState(false);
-
-  function handleChange(
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) {
-    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-  }
-
-  function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    setSubmitted(true);
-  }
-
-  const inputStyle = {
-    backgroundColor: "rgba(253,245,230,0.05)",
-    border: "1px solid rgba(253,245,230,0.15)",
-    borderRadius: "12px",
-    color: "var(--cream)",
-    padding: "14px 16px",
-    width: "100%",
-    fontSize: "0.9rem",
-    outline: "none",
-    transition: "border-color 0.2s",
-  } as React.CSSProperties;
-
-  const labelStyle = {
-    display: "block",
-    fontSize: "0.75rem",
-    fontWeight: 600,
-    letterSpacing: "0.08em",
-    textTransform: "uppercase" as const,
-    color: "rgba(253,245,230,0.55)",
-    marginBottom: "6px",
-  };
-
   return (
     <section
       id="contact"
@@ -95,9 +83,9 @@ export default function ContactSection() {
         }}
       />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6">
+      <div className="relative z-10 max-w-3xl mx-auto px-6">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-14">
           <div className="flex items-center justify-center gap-3 mb-4">
             <div
               className="h-px w-10"
@@ -131,202 +119,47 @@ export default function ContactSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
-          {/* Contact info */}
-          <div className="lg:col-span-2 space-y-6">
-            <h3
-              className="font-display text-xl font-bold mb-6"
-              style={{ color: "var(--cream)" }}
-            >
-              Contact Info
-            </h3>
-
-            {contactInfo.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                target={item.href.startsWith("http") ? "_blank" : undefined}
-                rel={
-                  item.href.startsWith("http")
-                    ? "noopener noreferrer"
-                    : undefined
-                }
-                className="flex items-start gap-4 p-5 rounded-2xl transition-all duration-200 hover:-translate-y-0.5 group"
-                style={{
-                  backgroundColor: "rgba(253,245,230,0.04)",
-                  border: "1px solid rgba(253,245,230,0.07)",
-                  textDecoration: "none",
-                }}
-              >
-                <span className="text-2xl mt-0.5">{item.icon}</span>
-                <div>
-                  <div
-                    className="text-xs font-bold uppercase tracking-widest mb-1"
-                    style={{ color: "rgba(253,245,230,0.4)" }}
-                  >
-                    {item.label}
-                  </div>
-                  <div
-                    className="text-sm font-medium leading-relaxed whitespace-pre-line group-hover:opacity-90 transition-opacity"
-                    style={{ color: "var(--cream)" }}
-                  >
-                    {item.value}
-                  </div>
-                </div>
-              </a>
-            ))}
-
-            {/* Quick CTA */}
-            <div
-              className="rounded-2xl p-6 mt-4"
+        {/* Contact info */}
+        <div className="space-y-4">
+          {contactInfo.map((item) => (
+            <a
+              key={item.label}
+              href={item.href}
+              target={item.href.startsWith("http") ? "_blank" : undefined}
+              rel={
+                item.href.startsWith("http")
+                  ? "noopener noreferrer"
+                  : undefined
+              }
+              className="flex items-start gap-4 p-5 rounded-2xl transition-all duration-200 hover:-translate-y-0.5 group"
               style={{
-                background:
-                  "linear-gradient(135deg, rgba(204,74,24,0.15), rgba(139,24,24,0.1))",
-                border: "1px solid rgba(204,74,24,0.2)",
+                backgroundColor: "rgba(253,245,230,0.04)",
+                border: "1px solid rgba(253,245,230,0.07)",
+                textDecoration: "none",
               }}
             >
-              <p
-                className="text-sm font-medium mb-3"
-                style={{ color: "rgba(253,245,230,0.8)" }}
+              <span
+                className="mt-0.5 flex-shrink-0"
+                style={{ color: "var(--chili-orange)" }}
               >
-                Prefer to call or text?
-              </p>
-              <a
-                href="tel:2405953696"
-                className="inline-flex items-center gap-2 font-bold text-lg"
-                style={{ color: "var(--chili-orange)", textDecoration: "none" }}
-              >
-                📞 240-595-3696
-              </a>
-            </div>
-          </div>
-
-          {/* Form */}
-          <div className="lg:col-span-3">
-            <div
-              className="rounded-3xl p-8 sm:p-10"
-              style={{
-                backgroundColor: "rgba(253,245,230,0.03)",
-                border: "1px solid rgba(253,245,230,0.08)",
-              }}
-            >
-              {submitted ? (
-                <div className="text-center py-12">
-                  <div className="text-6xl mb-4">🌶️</div>
-                  <h3
-                    className="font-display text-2xl font-bold mb-2"
-                    style={{ color: "var(--cream)" }}
-                  >
-                    Message Sent!
-                  </h3>
-                  <p style={{ color: "rgba(253,245,230,0.6)" }}>
-                    Thanks for reaching out. Bryant will be in touch soon.
-                  </p>
+                {item.icon}
+              </span>
+              <div>
+                <div
+                  className="text-xs font-bold uppercase tracking-widest mb-1"
+                  style={{ color: "rgba(253,245,230,0.4)" }}
+                >
+                  {item.label}
                 </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <div>
-                      <label style={labelStyle}>Your Name</label>
-                      <input
-                        type="text"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        required
-                        placeholder="Jane Smith"
-                        style={inputStyle}
-                        onFocus={(e) =>
-                          (e.target.style.borderColor = "var(--chili-orange)")
-                        }
-                        onBlur={(e) =>
-                          (e.target.style.borderColor =
-                            "rgba(253,245,230,0.15)")
-                        }
-                      />
-                    </div>
-                    <div>
-                      <label style={labelStyle}>Email</label>
-                      <input
-                        type="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        required
-                        placeholder="jane@example.com"
-                        style={inputStyle}
-                        onFocus={(e) =>
-                          (e.target.style.borderColor = "var(--chili-orange)")
-                        }
-                        onBlur={(e) =>
-                          (e.target.style.borderColor =
-                            "rgba(253,245,230,0.15)")
-                        }
-                      />
-                    </div>
-                  </div>
-
-                  <div>
-                    <label style={labelStyle}>Phone Number</label>
-                    <input
-                      type="tel"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      placeholder="(555) 555-5555"
-                      style={inputStyle}
-                      onFocus={(e) =>
-                        (e.target.style.borderColor = "var(--chili-orange)")
-                      }
-                      onBlur={(e) =>
-                        (e.target.style.borderColor = "rgba(253,245,230,0.15)")
-                      }
-                    />
-                  </div>
-
-                  <div>
-                    <label style={labelStyle}>
-                      Message / Event Details
-                    </label>
-                    <textarea
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      required
-                      rows={5}
-                      placeholder="Tell us what you need — order, catering, event size, date, etc."
-                      style={{ ...inputStyle, resize: "vertical" }}
-                      onFocus={(e) =>
-                        (e.target.style.borderColor = "var(--chili-orange)")
-                      }
-                      onBlur={(e) =>
-                        (e.target.style.borderColor = "rgba(253,245,230,0.15)")
-                      }
-                    />
-                  </div>
-
-                  <button
-                    type="submit"
-                    className="w-full py-4 rounded-full text-base font-bold transition-all duration-200 hover:scale-[1.02] hover:shadow-lg"
-                    style={{
-                      backgroundColor: "var(--chili-orange)",
-                      color: "var(--cream)",
-                      boxShadow: "0 4px 20px rgba(204,74,24,0.35)",
-                    }}
-                  >
-                    Send Message 🌶️
-                  </button>
-
-                  <p
-                    className="text-xs text-center"
-                    style={{ color: "rgba(253,245,230,0.35)" }}
-                  >
-                    We typically respond within 24 hours.
-                  </p>
-                </form>
-              )}
-            </div>
-          </div>
+                <div
+                  className="text-sm font-medium leading-relaxed whitespace-pre-line group-hover:opacity-90 transition-opacity"
+                  style={{ color: "var(--cream)" }}
+                >
+                  {item.value}
+                </div>
+              </div>
+            </a>
+          ))}
         </div>
       </div>
     </section>

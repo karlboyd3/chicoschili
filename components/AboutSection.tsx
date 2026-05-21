@@ -5,14 +5,17 @@ function ImagePlaceholder({ label }: { label: string }) {
       style={{
         background:
           "linear-gradient(160deg, #4A1A08 0%, #7A2510 50%, #3A1206 100%)",
-        border: "2px dashed rgba(201,162,39,0.25)",
+        border: "1px solid rgba(201,162,39,0.1)",
       }}
     >
       <div className="text-center p-8">
-        <div className="text-6xl mb-3 opacity-50">👨‍🍳</div>
+        <svg className="w-10 h-10 mx-auto mb-3 opacity-20" fill="none" stroke="currentColor" viewBox="0 0 24 24" style={{ color: "var(--cream)" }}>
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
+        </svg>
         <p
           className="text-sm font-medium tracking-wide uppercase"
-          style={{ color: "rgba(253,245,230,0.45)" }}
+          style={{ color: "rgba(253,245,230,0.35)" }}
         >
           {label}
         </p>
@@ -23,17 +26,14 @@ function ImagePlaceholder({ label }: { label: string }) {
 
 const highlights = [
   {
-    icon: "🔥",
     title: "Bold Seasoning",
     desc: "Every batch crafted with a signature spice blend that builds layers of flavor.",
   },
   {
-    icon: "🏡",
     title: "Homemade Roots",
     desc: "Started from the kitchen, built with love — no shortcuts, no preservatives.",
   },
   {
-    icon: "🤝",
     title: "Community First",
     desc: "Proudly serving Alexandria and the DMV with food that brings people together.",
   },
@@ -107,10 +107,10 @@ export default function AboutSection() {
               }}
             >
               <div
-                className="w-10 h-10 rounded-full flex items-center justify-center text-lg"
-                style={{ backgroundColor: "var(--chili-red)" }}
+                className="w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold"
+                style={{ backgroundColor: "var(--chili-red)", color: "var(--cream)" }}
               >
-                🌶️
+                BB
               </div>
               <div>
                 <div
@@ -138,13 +138,16 @@ export default function AboutSection() {
               {highlights.map((h) => (
                 <div
                   key={h.title}
-                  className="rounded-2xl p-4 text-center transition-transform duration-200 hover:-translate-y-1"
+                  className="rounded-2xl p-4 transition-transform duration-200 hover:-translate-y-1"
                   style={{
                     backgroundColor: "rgba(28,13,6,0.04)",
                     border: "1px solid rgba(28,13,6,0.08)",
                   }}
                 >
-                  <div className="text-2xl mb-2">{h.icon}</div>
+                  <div
+                    className="w-6 h-0.5 mb-3"
+                    style={{ backgroundColor: "var(--chili-orange)" }}
+                  />
                   <div
                     className="text-xs font-bold"
                     style={{ color: "var(--dark-brown)" }}
