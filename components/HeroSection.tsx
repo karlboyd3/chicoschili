@@ -56,7 +56,7 @@ export default function HeroSection() {
         }}
       />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 pt-28 pb-16 w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 pt-56 pb-16 w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         {/* Left: Text */}
         <div className="order-2 lg:order-1">
           {/* Badge */}
