@@ -31,10 +31,10 @@ export default function Navbar() {
         borderBottom: scrolled ? "1px solid rgba(201, 162, 39, 0.2)" : "1px solid transparent",
       }}
     >
-      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-18 py-4">
+      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between py-6">
         {/* Logo */}
         <a href="#home" className="flex items-center">
-          <Image src="/logo.png" alt="Chico's Chili" width={280} height={112} className="object-contain" style={{ maxHeight: "100px", width: "auto" }} />
+          <Image src="/logo.png" alt="Chico's Chili" width={360} height={144} className="object-contain" style={{ maxHeight: "140px", width: "auto" }} />
         </a>
 
         {/* Desktop Nav */}
