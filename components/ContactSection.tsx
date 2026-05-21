@@ -79,7 +79,7 @@ export default function ContactSection() {
         className="absolute top-0 left-0 right-0 h-px"
         style={{
           background:
-            "linear-gradient(90deg, transparent, rgba(201,162,39,0.4), transparent)",
+            "linear-gradient(90deg, transparent, rgba(204,0,0,0.4), transparent)",
         }}
       />
 
@@ -112,7 +112,7 @@ export default function ContactSection() {
           </h2>
           <p
             className="text-base max-w-xl mx-auto"
-            style={{ color: "rgba(253,245,230,0.6)" }}
+            style={{ color: "rgba(255,255,255,0.6)" }}
           >
             Ready to order, book catering, or just ask a question? Reach out —
             Bryant will get back to you fast.
@@ -133,8 +133,8 @@ export default function ContactSection() {
               }
               className="flex items-start gap-4 p-5 rounded-2xl transition-all duration-200 hover:-translate-y-0.5 group"
               style={{
-                backgroundColor: "rgba(253,245,230,0.04)",
-                border: "1px solid rgba(253,245,230,0.07)",
+                backgroundColor: "rgba(255,255,255,0.04)",
+                border: "1px solid rgba(255,255,255,0.07)",
                 textDecoration: "none",
               }}
             >
@@ -147,7 +147,7 @@ export default function ContactSection() {
               <div>
                 <div
                   className="text-xs font-bold uppercase tracking-widest mb-1"
-                  style={{ color: "rgba(253,245,230,0.4)" }}
+                  style={{ color: "rgba(255,255,255,0.4)" }}
                 >
                   {item.label}
                 </div>

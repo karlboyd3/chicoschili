@@ -1,13 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --chili-red: #8B1818;
-  --chili-orange: #CC4A18;
-  --cream: #FDF5E6;
-  --dark-brown: #1C0D06;
-  --gold: #C9A227;
-  --charcoal: #242424;
-  --warm-white: #FAF7F2;
+  --chili-red: #CC0000;
+  --chili-orange: #CC0000;
+  --cream: #FFFFFF;
+  --dark-brown: #0A0A0A;
+  --gold: #CC0000;
+  --charcoal: #111111;
+  --warm-white: #F5F5F5;
 }
 
 @theme inline {
@@ -35,7 +35,7 @@ body {
 }
 
 .footer-link {
-  color: rgba(253, 245, 230, 0.65);
+  color: rgba(255, 255, 255, 0.65);
   text-decoration: none;
   transition: color 0.2s;
 }

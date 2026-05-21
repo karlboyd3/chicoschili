@@ -38,7 +38,7 @@ export default function CateringSection() {
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse at 0% 100%, rgba(204,74,24,0.12) 0%, transparent 55%), radial-gradient(ellipse at 100% 0%, rgba(139,24,24,0.1) 0%, transparent 50%)",
+            "radial-gradient(ellipse at 0% 100%, rgba(204,0,0,0.12) 0%, transparent 55%), radial-gradient(ellipse at 100% 0%, rgba(153,0,0,0.1) 0%, transparent 50%)",
         }}
       />
 
@@ -47,7 +47,7 @@ export default function CateringSection() {
         className="absolute top-0 left-0 right-0 h-px"
         style={{
           background:
-            "linear-gradient(90deg, transparent, rgba(201,162,39,0.5), transparent)",
+            "linear-gradient(90deg, transparent, rgba(204,0,0,0.5), transparent)",
         }}
       />
 
@@ -82,7 +82,7 @@ export default function CateringSection() {
 
           <p
             className="text-lg max-w-2xl mx-auto leading-relaxed"
-            style={{ color: "rgba(253,245,230,0.65)" }}
+            style={{ color: "rgba(255,255,255,0.65)" }}
           >
             Whether it&apos;s a backyard cookout, an office lunch, or a
             community pop-up — Chico&apos;s Chili is ready to feed your crowd
@@ -97,8 +97,8 @@ export default function CateringSection() {
               key={label}
               className="px-5 py-3 rounded-full text-sm font-medium"
               style={{
-                backgroundColor: "rgba(253,245,230,0.05)",
-                border: "1px solid rgba(253,245,230,0.12)",
+                backgroundColor: "rgba(255,255,255,0.05)",
+                border: "1px solid rgba(255,255,255,0.12)",
                 color: "var(--cream)",
               }}
             >
@@ -114,8 +114,8 @@ export default function CateringSection() {
               key={perk.title}
               className="rounded-2xl p-6 transition-all duration-200 hover:-translate-y-1"
               style={{
-                backgroundColor: "rgba(253,245,230,0.04)",
-                border: "1px solid rgba(253,245,230,0.08)",
+                backgroundColor: "rgba(255,255,255,0.04)",
+                border: "1px solid rgba(255,255,255,0.08)",
               }}
             >
               <div
@@ -130,7 +130,7 @@ export default function CateringSection() {
               </h3>
               <p
                 className="text-sm leading-relaxed"
-                style={{ color: "rgba(253,245,230,0.55)" }}
+                style={{ color: "rgba(255,255,255,0.55)" }}
               >
                 {perk.desc}
               </p>
@@ -143,8 +143,8 @@ export default function CateringSection() {
           className="rounded-3xl p-10 text-center"
           style={{
             background:
-              "linear-gradient(135deg, rgba(204,74,24,0.18) 0%, rgba(139,24,24,0.12) 100%)",
-            border: "1px solid rgba(201,162,39,0.2)",
+              "linear-gradient(135deg, rgba(204,0,0,0.18) 0%, rgba(153,0,0,0.12) 100%)",
+            border: "1px solid rgba(204,0,0,0.2)",
           }}
         >
           <h3
@@ -155,7 +155,7 @@ export default function CateringSection() {
           </h3>
           <p
             className="mb-8 max-w-md mx-auto"
-            style={{ color: "rgba(253,245,230,0.65)" }}
+            style={{ color: "rgba(255,255,255,0.65)" }}
           >
             Contact Bryant directly to discuss your event details, menu
             selections, and availability.
@@ -164,9 +164,9 @@ export default function CateringSection() {
             href="#contact"
             className="inline-flex items-center gap-2 px-10 py-4 rounded-full text-base font-bold transition-all duration-200 hover:scale-105"
             style={{
-              backgroundColor: "var(--gold)",
-              color: "var(--dark-brown)",
-              boxShadow: "0 4px 24px rgba(201,162,39,0.3)",
+              backgroundColor: "var(--chili-red)",
+              color: "#FFFFFF",
+              boxShadow: "0 4px 24px rgba(204,0,0,0.35)",
             }}
           >
             Book Chico&apos;s Chili for Your Event

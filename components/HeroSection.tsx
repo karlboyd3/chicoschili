@@ -5,8 +5,8 @@ function ImagePlaceholder({ label }: { label: string }) {
       style={{
         aspectRatio: "4/5",
         background:
-          "linear-gradient(135deg, #3D1108 0%, #7A2510 40%, #4A1A08 70%, #2A0D04 100%)",
-        border: "2px dashed rgba(201,162,39,0.3)",
+          "linear-gradient(135deg, #111111 0%, #222222 40%, #1a1a1a 70%, #0a0a0a 100%)",
+        border: "2px dashed rgba(204,0,0,0.3)",
       }}
     >
       <div className="text-center p-8">
@@ -16,13 +16,13 @@ function ImagePlaceholder({ label }: { label: string }) {
         </svg>
         <p
           className="text-sm font-medium tracking-wide uppercase"
-          style={{ color: "rgba(253,245,230,0.4)" }}
+          style={{ color: "rgba(255,255,255,0.4)" }}
         >
           {label}
         </p>
         <p
           className="text-xs mt-1"
-          style={{ color: "rgba(253,245,230,0.25)" }}
+          style={{ color: "rgba(255,255,255,0.25)" }}
         >
           Replace with actual photo
         </p>
@@ -30,11 +30,11 @@ function ImagePlaceholder({ label }: { label: string }) {
       {/* Decorative rings */}
       <div
         className="absolute -bottom-12 -right-12 w-48 h-48 rounded-full border"
-        style={{ borderColor: "rgba(201,162,39,0.1)" }}
+        style={{ borderColor: "rgba(204,0,0,0.15)" }}
       />
       <div
         className="absolute -top-8 -left-8 w-32 h-32 rounded-full border"
-        style={{ borderColor: "rgba(204,74,24,0.1)" }}
+        style={{ borderColor: "rgba(204,0,0,0.15)" }}
       />
     </div>
   );
@@ -52,7 +52,7 @@ export default function HeroSection() {
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse at 70% 50%, rgba(204,74,24,0.15) 0%, transparent 60%), radial-gradient(ellipse at 20% 80%, rgba(139,24,24,0.12) 0%, transparent 50%)",
+            "radial-gradient(ellipse at 70% 50%, rgba(204,0,0,0.15) 0%, transparent 60%), radial-gradient(ellipse at 20% 80%, rgba(153,0,0,0.12) 0%, transparent 50%)",
         }}
       />
 
@@ -63,8 +63,8 @@ export default function HeroSection() {
           <div
             className="inline-flex items-center gap-2 rounded-full px-4 py-2 mb-8"
             style={{
-              backgroundColor: "rgba(204,74,24,0.12)",
-              border: "1px solid rgba(204,74,24,0.3)",
+              backgroundColor: "rgba(204,0,0,0.12)",
+              border: "1px solid rgba(204,0,0,0.3)",
             }}
           >
             <span
@@ -89,7 +89,7 @@ export default function HeroSection() {
 
           <p
             className="text-lg sm:text-xl leading-relaxed mb-10 max-w-lg"
-            style={{ color: "rgba(253,245,230,0.72)" }}
+            style={{ color: "rgba(255,255,255,0.72)" }}
           >
             Chico&apos;s Chili is a local food brand bringing you hearty,
             handcrafted comfort food packed with bold seasoning and
@@ -101,22 +101,11 @@ export default function HeroSection() {
           <div className="flex flex-wrap gap-4">
             <a
               href="#contact"
-              className="px-7 py-4 rounded-full text-base font-bold transition-all duration-200 hover:scale-105 hover:shadow-lg"
-              style={{
-                backgroundColor: "var(--chili-orange)",
-                color: "var(--cream)",
-                boxShadow: "0 4px 20px rgba(204,74,24,0.4)",
-              }}
-            >
-              Order Now
-            </a>
-            <a
-              href="#contact"
               className="px-7 py-4 rounded-full text-base font-bold transition-all duration-200 hover:scale-105"
               style={{
                 backgroundColor: "transparent",
                 color: "var(--cream)",
-                border: "2px solid rgba(253,245,230,0.35)",
+                border: "2px solid rgba(255,255,255,0.35)",
               }}
             >
               Contact Us
@@ -127,9 +116,9 @@ export default function HeroSection() {
               rel="noopener noreferrer"
               className="px-7 py-4 rounded-full text-base font-bold transition-all duration-200 hover:scale-105 flex items-center gap-2"
               style={{
-                backgroundColor: "rgba(201,162,39,0.12)",
-                color: "var(--gold)",
-                border: "2px solid rgba(201,162,39,0.3)",
+                backgroundColor: "rgba(204,0,0,0.12)",
+                color: "var(--chili-red)",
+                border: "2px solid rgba(204,0,0,0.3)",
               }}
             >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -142,7 +131,7 @@ export default function HeroSection() {
           {/* Stats row */}
           <div
             className="flex gap-8 mt-12 pt-10 border-t"
-            style={{ borderColor: "rgba(253,245,230,0.1)" }}
+            style={{ borderColor: "rgba(255,255,255,0.1)" }}
           >
             {[
               { value: "100%", label: "Homemade" },
@@ -158,7 +147,7 @@ export default function HeroSection() {
                 </div>
                 <div
                   className="text-xs uppercase tracking-widest mt-1"
-                  style={{ color: "rgba(253,245,230,0.45)" }}
+                  style={{ color: "rgba(255,255,255,0.45)" }}
                 >
                   {stat.label}
                 </div>
@@ -181,12 +170,12 @@ export default function HeroSection() {
           className="w-px h-8"
           style={{
             background:
-              "linear-gradient(to bottom, transparent, rgba(253,245,230,0.4))",
+              "linear-gradient(to bottom, transparent, rgba(255,255,255,0.4))",
           }}
         />
         <div
           className="w-1.5 h-1.5 rounded-full"
-          style={{ backgroundColor: "rgba(253,245,230,0.4)" }}
+          style={{ backgroundColor: "rgba(255,255,255,0.4)" }}
         />
       </div>
     </section>

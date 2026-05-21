@@ -52,7 +52,7 @@ function MenuCard({ item }: { item: (typeof menuItems)[number] }) {
         style={{
           aspectRatio: "16/10",
           background:
-            "linear-gradient(135deg, #3D1108 0%, #6B2210 50%, #3A0E06 100%)",
+            "linear-gradient(135deg, #111111 0%, #222222 50%, #0a0a0a 100%)",
         }}
       >
         <svg className="w-8 h-8 opacity-15" fill="none" stroke="currentColor" viewBox="0 0 24 24" style={{ color: "var(--cream)" }}>
@@ -81,32 +81,21 @@ function MenuCard({ item }: { item: (typeof menuItems)[number] }) {
         </h3>
         <p
           className="text-sm leading-relaxed flex-1"
-          style={{ color: "rgba(253,245,230,0.65)" }}
+          style={{ color: "rgba(255,255,255,0.65)" }}
         >
           {item.desc}
         </p>
 
         <div
           className="mt-6 pt-4 border-t flex items-center justify-between"
-          style={{ borderColor: "rgba(253,245,230,0.08)" }}
+          style={{ borderColor: "rgba(255,255,255,0.08)" }}
         >
           <span
             className="text-xs font-medium"
-            style={{ color: "rgba(253,245,230,0.35)" }}
+            style={{ color: "rgba(255,255,255,0.35)" }}
           >
             Price on request
           </span>
-          <a
-            href="#contact"
-            className="text-xs font-bold px-4 py-2 rounded-full transition-all duration-200 hover:scale-105"
-            style={{
-              backgroundColor: "rgba(204,74,24,0.15)",
-              color: "var(--chili-orange)",
-              border: "1px solid rgba(204,74,24,0.3)",
-            }}
-          >
-            Order Now
-          </a>
         </div>
       </div>
     </div>
@@ -149,7 +138,7 @@ export default function MenuSection() {
           </h2>
           <p
             className="text-base max-w-xl mx-auto"
-            style={{ color: "rgba(253,245,230,0.6)" }}
+            style={{ color: "rgba(255,255,255,0.6)" }}
           >
             Every item made with Chico&apos;s signature chili — bold,
             satisfying, and unforgettable. Perfect for individuals, families,
@@ -168,7 +157,7 @@ export default function MenuSection() {
         <div className="text-center mt-14">
           <p
             className="text-sm mb-4"
-            style={{ color: "rgba(253,245,230,0.5)" }}
+            style={{ color: "rgba(255,255,255,0.5)" }}
           >
             Ready to order or have questions about the menu?
           </p>

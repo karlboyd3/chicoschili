@@ -4,8 +4,8 @@ function ImagePlaceholder({ label }: { label: string }) {
       className="relative flex items-center justify-center rounded-3xl overflow-hidden w-full h-full min-h-80"
       style={{
         background:
-          "linear-gradient(160deg, #4A1A08 0%, #7A2510 50%, #3A1206 100%)",
-        border: "1px solid rgba(201,162,39,0.1)",
+          "linear-gradient(160deg, #111111 0%, #222222 50%, #0a0a0a 100%)",
+        border: "1px solid rgba(204,0,0,0.15)",
       }}
     >
       <div className="text-center p-8">
@@ -15,7 +15,7 @@ function ImagePlaceholder({ label }: { label: string }) {
         </svg>
         <p
           className="text-sm font-medium tracking-wide uppercase"
-          style={{ color: "rgba(253,245,230,0.35)" }}
+          style={{ color: "rgba(255,255,255,0.35)" }}
         >
           {label}
         </p>
@@ -75,7 +75,7 @@ export default function AboutSection() {
 
             <div
               className="space-y-5 text-base leading-relaxed"
-              style={{ color: "rgba(28,13,6,0.75)" }}
+              style={{ color: "rgba(0,0,0,0.75)" }}
             >
               <p>
                 Chico&apos;s Chili was born from a simple belief: great food
@@ -102,8 +102,8 @@ export default function AboutSection() {
             <div
               className="mt-8 inline-flex items-center gap-4 rounded-2xl px-6 py-4"
               style={{
-                backgroundColor: "rgba(139,24,24,0.06)",
-                border: "1px solid rgba(139,24,24,0.12)",
+                backgroundColor: "rgba(204,0,0,0.06)",
+                border: "1px solid rgba(204,0,0,0.12)",
               }}
             >
               <div
@@ -121,7 +121,7 @@ export default function AboutSection() {
                 </div>
                 <div
                   className="text-xs"
-                  style={{ color: "rgba(28,13,6,0.55)" }}
+                  style={{ color: "rgba(0,0,0,0.55)" }}
                 >
                   Owner &amp; Head Chef, Chico&apos;s Chili
                 </div>
@@ -140,8 +140,8 @@ export default function AboutSection() {
                   key={h.title}
                   className="rounded-2xl p-4 transition-transform duration-200 hover:-translate-y-1"
                   style={{
-                    backgroundColor: "rgba(28,13,6,0.04)",
-                    border: "1px solid rgba(28,13,6,0.08)",
+                    backgroundColor: "rgba(0,0,0,0.04)",
+                    border: "1px solid rgba(0,0,0,0.08)",
                   }}
                 >
                   <div
@@ -156,7 +156,7 @@ export default function AboutSection() {
                   </div>
                   <div
                     className="text-xs mt-1 leading-relaxed hidden sm:block"
-                    style={{ color: "rgba(28,13,6,0.55)" }}
+                    style={{ color: "rgba(0,0,0,0.55)" }}
                   >
                     {h.desc}
                   </div>
