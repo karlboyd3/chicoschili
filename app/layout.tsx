@@ -14,9 +14,11 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://chicoschili.com"),
   title: "Chicos Chili | Bold, Homemade Chili With Real Flavor",
   description:
     "Chicos Chili — bold, hearty, homemade chili with real flavor. Available for catering, events, and orders in Alexandria, VA. Call 571-545-0059.",
+  alternates: { canonical: "/" },
 };
 
 export default function RootLayout({
