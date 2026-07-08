@@ -17,7 +17,6 @@ export const metadata: Metadata = {
   title: "Chicos Chili | Bold, Homemade Chili With Real Flavor",
   description:
     "Chicos Chili — bold, hearty, homemade chili with real flavor. Available for catering, events, and orders in Alexandria, VA. Call 571-545-0059.",
-  icons: { icon: "/favicon.ico" },
 };
 
 export default function RootLayout({

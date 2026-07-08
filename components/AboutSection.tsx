@@ -1,28 +1,4 @@
-function ImagePlaceholder({ label }: { label: string }) {
-  return (
-    <div
-      className="relative flex items-center justify-center rounded-3xl overflow-hidden w-full h-full min-h-80"
-      style={{
-        background:
-          "linear-gradient(160deg, #111111 0%, #222222 50%, #0a0a0a 100%)",
-        border: "1px solid rgba(204,0,0,0.15)",
-      }}
-    >
-      <div className="text-center p-8">
-        <svg className="w-10 h-10 mx-auto mb-3 opacity-20" fill="none" stroke="currentColor" viewBox="0 0 24 24" style={{ color: "var(--cream)" }}>
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
-        </svg>
-        <p
-          className="text-sm font-medium tracking-wide uppercase"
-          style={{ color: "rgba(255,255,255,0.35)" }}
-        >
-          {label}
-        </p>
-      </div>
-    </div>
-  );
-}
+import Image from "next/image";
 
 const highlights = [
   {
@@ -131,7 +107,18 @@ export default function AboutSection() {
 
           {/* Image */}
           <div className="space-y-6">
-            <ImagePlaceholder label="Bryant Bolden / Brand Photo" />
+            <div
+              className="relative w-full h-full min-h-80 rounded-3xl overflow-hidden"
+              style={{ border: "1px solid rgba(204,0,0,0.15)" }}
+            >
+              <Image
+                src="/Bryant%20Bolden.png"
+                alt="Bryant Bolden, Owner & Head Chef of Chico's Chili"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover"
+              />
+            </div>
 
             {/* Highlights grid */}
             <div className="grid grid-cols-3 gap-3">
