@@ -1,39 +1,29 @@
-function ImagePlaceholder({ label }: { label: string }) {
+import Image from "next/image";
+
+function FeatureImage({ label }: { label: string }) {
   return (
     <div
       className="relative flex items-center justify-center rounded-3xl overflow-hidden w-full"
       style={{
         aspectRatio: "4/5",
-        background:
-          "linear-gradient(135deg, #111111 0%, #222222 40%, #1a1a1a 70%, #0a0a0a 100%)",
-        border: "2px dashed rgba(204,0,0,0.3)",
+        border: "2px solid rgba(204,0,0,0.3)",
       }}
     >
-      <div className="text-center p-8">
-        <svg className="w-12 h-12 mx-auto mb-4 opacity-20" fill="none" stroke="currentColor" viewBox="0 0 24 24" style={{ color: "var(--cream)" }}>
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
-        </svg>
-        <p
-          className="text-sm font-medium tracking-wide uppercase"
-          style={{ color: "rgba(255,255,255,0.4)" }}
-        >
-          {label}
-        </p>
-        <p
-          className="text-xs mt-1"
-          style={{ color: "rgba(255,255,255,0.25)" }}
-        >
-          Replace with actual photo
-        </p>
-      </div>
+      <Image
+        src="/Chili.png"
+        alt={label}
+        fill
+        priority
+        sizes="(max-width: 1024px) 100vw, 40vw"
+        className="object-cover"
+      />
       {/* Decorative rings */}
       <div
-        className="absolute -bottom-12 -right-12 w-48 h-48 rounded-full border"
+        className="absolute -bottom-12 -right-12 w-48 h-48 rounded-full border pointer-events-none"
         style={{ borderColor: "rgba(204,0,0,0.15)" }}
       />
       <div
-        className="absolute -top-8 -left-8 w-32 h-32 rounded-full border"
+        className="absolute -top-8 -left-8 w-32 h-32 rounded-full border pointer-events-none"
         style={{ borderColor: "rgba(204,0,0,0.15)" }}
       />
     </div>
@@ -159,7 +149,7 @@ export default function HeroSection() {
         {/* Right: Image */}
         <div className="order-1 lg:order-2 flex justify-center">
           <div className="w-full max-w-md">
-            <ImagePlaceholder label="Chicos Chili Feature Photo" />
+            <FeatureImage label="Chicos Chili Feature Photo" />
           </div>
         </div>
       </div>
