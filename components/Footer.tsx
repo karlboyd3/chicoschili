@@ -144,6 +144,19 @@ export default function Footer() {
           </p>
           <p
             className="text-xs"
+            style={{ color: "rgba(255,255,255,0.3)" }}
+          >
+            Website by{" "}
+            <a
+              href="https://www.bashntech.com"
+              className="transition-colors hover:text-white"
+              style={{ color: "rgba(255,255,255,0.45)" }}
+            >
+              BashNTech
+            </a>
+          </p>
+          <p
+            className="text-xs"
             style={{ color: "rgba(255,255,255,0.2)" }}
           >
             Alexandria, VA
