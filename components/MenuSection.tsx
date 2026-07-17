@@ -13,7 +13,7 @@ const menuItems = [
     desc: "Signature chili served over warm rice for a filling, comfort-food meal.",
     tag: "Fan Favorite",
     tagColor: "var(--chili-orange)",
-    img: "/Chili_Over_Rice.png",
+    img: "/Chili_over_ricev2.png",
   },
   {
     name: "Cornbread",
@@ -34,14 +34,14 @@ const menuItems = [
     desc: "Crispy nachos loaded with Chicos Chili and toppings. Great for sharing or as a full meal.",
     tag: "Great for Sharing",
     tagColor: "var(--chili-orange)",
-    img: "/Chili_Nachos.png",
+    img: "/Nachos.png",
   },
   {
     name: "Chili Fries",
     desc: "Hot fries covered with Chicos Chili for the ultimate comfort-food side or meal.",
     tag: "Comfort Food",
     tagColor: "var(--gold)",
-    img: "/Chili_Fries.png",
+    img: "/Fries.png",
   },
 ];
 
